@@ -1,0 +1,36 @@
+{
+  "name": "ts-template",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "author": "Imar Abreu Diaz",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./dist/main.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage -t",
+    "test:watch": "jest --watch-all -t",
+    "lint": "eslint --max-warnings 0 . --ext .ts",
+    "lint:fix": "eslint ./src/*.ts --fix",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cowcoders/eslint-config": "1.2.11",
+    "@types/jest": "26.0.24",
+    "@types/node": "16.3.3",
+    "@typescript-eslint/eslint-plugin": "4.28.3",
+    "@typescript-eslint/parser": "4.28.3",
+    "eslint": "7.31.0",
+    "jest": "27.0.6",
+    "ts-jest": "27.0.3",
+    "ts-node": "10.1.0",
+    "typescript": "4.3.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "dist"
+    ]
+  }
+}
